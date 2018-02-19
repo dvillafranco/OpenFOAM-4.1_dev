@@ -1,1 +1,0 @@
-../interfaceCompositionModels/interfaceCompositionModel/interfaceCompositionModel.C
