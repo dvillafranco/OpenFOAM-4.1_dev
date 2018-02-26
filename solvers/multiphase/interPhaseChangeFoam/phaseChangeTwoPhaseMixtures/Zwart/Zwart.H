@@ -40,15 +40,18 @@ References
 
 // * * * * * * * * * * * * * * * * *  * * * * * * * * * * * * * * * * //
 
-namespace Foam {
-    namespace phaseChangeTwoPhaseMixtures {
+namespace Foam
+{
+    namespace phaseChangeTwoPhaseMixtures
+    {
 /*--------------------------------------------------------------------*\
                               Class Zwart
 \*--------------------------------------------------------------------*/
 
         class Zwart
                 :
-                        public phaseChangeTwoPhaseMixtures {
+                        public phaseChangeTwoPhaseMixture
+        {
             // Private data
 
             //- radius of nucleation site

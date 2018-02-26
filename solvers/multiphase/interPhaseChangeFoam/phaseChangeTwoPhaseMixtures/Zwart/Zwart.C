@@ -33,7 +33,7 @@ namespace Foam
 {
     namespace phaseChangeTwoPhaseMixtures
     {
-        defineTypeNameandDebug(Zwart,0);
+        defineTypeNameandDebug(Zwart, 0);
         addToRunTimeSelectionTable
                 (
                         phaseChangeTwoPhaseMixture,
