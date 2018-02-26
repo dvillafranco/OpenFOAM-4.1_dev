@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="interPhaseChangeDyMFoam">
+        <in>interPhaseChangeDyMFoam.C</in>
+      </df>
+      <df name="phaseChangeTwoPhaseMixtures">
+        <df name="Kunz">
+          <in>Kunz.C</in>
+        </df>
+        <df name="lnInclude">
+          <in>Kunz.C</in>
+          <in>Merkle.C</in>
+          <in>SchnerrSauer.C</in>
+          <in>newPhaseChangeTwoPhaseMixture.C</in>
+          <in>phaseChangeTwoPhaseMixture.C</in>
+        </df>
+        <df name="Merkle">
+          <in>Merkle.C</in>
+        </df>
+        <df name="phaseChangeTwoPhaseMixture">
+          <in>newPhaseChangeTwoPhaseMixture.C</in>
+          <in>phaseChangeTwoPhaseMixture.C</in>
+        </df>
+        <df name="SchnerrSauer">
+          <in>SchnerrSauer.C</in>
+        </df>
+        <df name="Zwart">
+          <in>Zwart.C</in>
+        </df>
+      </df>
+      <in>interPhaseChangeFoam.C</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand>wmake</preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="interPhaseChangeDyMFoam/interPhaseChangeDyMFoam.C"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="interPhaseChangeFoam.C" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="phaseChangeTwoPhaseMixtures/Kunz/Kunz.C"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="phaseChangeTwoPhaseMixtures/Merkle/Merkle.C"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="phaseChangeTwoPhaseMixtures/SchnerrSauer/SchnerrSauer.C"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="phaseChangeTwoPhaseMixtures/Zwart/Zwart.C"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="phaseChangeTwoPhaseMixtures/lnInclude/Kunz.C"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="phaseChangeTwoPhaseMixtures/lnInclude/Merkle.C"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="phaseChangeTwoPhaseMixtures/lnInclude/SchnerrSauer.C"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="phaseChangeTwoPhaseMixtures/lnInclude/newPhaseChangeTwoPhaseMixture.C"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="phaseChangeTwoPhaseMixtures/lnInclude/phaseChangeTwoPhaseMixture.C"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="phaseChangeTwoPhaseMixtures/phaseChangeTwoPhaseMixture/newPhaseChangeTwoPhaseMixture.C"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="phaseChangeTwoPhaseMixtures/phaseChangeTwoPhaseMixture/phaseChangeTwoPhaseMixture.C"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

@@ -33,7 +33,7 @@ namespace Foam
 {
     namespace phaseChangeTwoPhaseMixtures
     {
-        defineTypeNameandDebug(Zwart, 0);
+        defineTypeNameAndDebug(Zwart, 0);
         addToRunTimeSelectionTable
                 (
                         phaseChangeTwoPhaseMixture,
@@ -50,12 +50,12 @@ Foam::phaseChangeTwoPhaseMixtures::Zwart::Zwart
                 const surfaceScalarField& phi
         )
 :
-                phaseChangeTwoPhaseMixtures(typeName, U, phi),
+                phaseChangeTwoPhaseMixture(typeName, U, phi),
 
                 rNuc_(phaseChangeTwoPhaseMixtureCoeffs_.lookup("rNuc")),
-                Fc_(phaseChangeTwoPhaseMixtureCoeffs_.loopkup("Fc")),
+                Fc_(phaseChangeTwoPhaseMixtureCoeffs_.lookup("Fc")),
                 Fv_(phaseChangeTwoPhaseMixtureCoeffs_.lookup("Fv")),
-                Rb_(phaseChangeTwoPhaseMixtureCoeffs_.loopup("Rb")),
+                Rb_(phaseChangeTwoPhaseMixtureCoeffs_.lookup("Rb")),
                 p0_("0",pSat().dimensions(),0.0)
 {
     correct();
@@ -64,7 +64,7 @@ Foam::phaseChangeTwoPhaseMixtures::Zwart::Zwart
 // * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * * //
 
 
-Foam::dimensionedScalar
+Foam::tmp<Foam::volScalarField>
 Foam::phaseChangeTwoPhaseMixtures::Zwart::pCoeff
         (
                 const volScalarField &p
@@ -110,7 +110,7 @@ Foam::phaseChangeTwoPhaseMixtures::Zwart::mDotP() const
 
     return Pair<tmp<volScalarField>>
                                   (
-                                          Fc_*3*limitedAlpha1*rho2()/Rb_*apCoeff*pos(p-pSat(), p0_)
+                                          Fc_*3*limitedAlpha1*rho2()/Rb_*apCoeff*pos(p-pSat()),
 
                                           -Fv_*3*rNuc_*(1-limitedAlpha1)*rho2()/Rb_*apCoeff*neg(p-pSat())
                                   );
@@ -127,7 +127,7 @@ bool Foam::phaseChangeTwoPhaseMixtures::Zwart::read()
         phaseChangeTwoPhaseMixtureCoeffs_.lookup("rNuc") >> rNuc_;
         phaseChangeTwoPhaseMixtureCoeffs_.lookup("Rb") >> Rb_;
         phaseChangeTwoPhaseMixtureCoeffs_.lookup("Fv") >> Fv_;
-        phaseChangeTwoPhaseMixtureCoeffs_.loookup("Fc") >> Fc_;
+        phaseChangeTwoPhaseMixtureCoeffs_.lookup("Fc") >> Fc_;
 
         return true;
     }
