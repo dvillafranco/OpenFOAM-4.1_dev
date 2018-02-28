@@ -7,4 +7,16 @@
         <activeConfTypeElem>0</activeConfTypeElem>
         <activeConfIndexElem>0</activeConfIndexElem>
     </data>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/projectnb/ryanlab/dorien/OpenFOAM-4.1/solvers/multiphase/interPhaseChangeFoam/phaseChangeTwoPhaseMixtures/Zwart/Zwart.C</file>
+            <file>file:/projectnb/ryanlab/dorien/OpenFOAM-4.1/solvers/multiphase/interPhaseChangeFoam/phaseChangeTwoPhaseMixtures/Zwart/Zwart.H</file>
+            <file>file:/projectnb/ryanlab/dorien/OpenFOAM-4.1/solvers/multiphase/interPhaseChangeFoam/interPhaseChangeFoam.C</file>
+            <file>file:/projectnb/ryanlab/dorien/OpenFOAM-4.1/solvers/multiphase/interPhaseChangeFoam/phaseChangeTwoPhaseMixtures/SchnerrSauer/SchnerrSauer.C</file>
+            <file>file:/projectnb/ryanlab/dorien/OpenFOAM-4.1/solvers/multiphase/interPhaseChangeFoam/phaseChangeTwoPhaseMixtures/Kunz/Kunz.C</file>
+            <file>file:/projectnb/ryanlab/dorien/OpenFOAM-4.1/solvers/multiphase/interPhaseChangeFoam/pEqn.H</file>
+            <file>file:/projectnb/ryanlab/dorien/OpenFOAM-4.1/solvers/multiphase/interPhaseChangeFoam/alphaEqn.H</file>
+        </group>
+    </open-files>
 </project-private>
