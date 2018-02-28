@@ -1,3 +1,7 @@
 id_rsa_buscc*
 InterfaceCompositionModel.C
 InterfaceCompositionModel.H
+/projectnb/ryanlab/dorien/OpenFOAM-4.1/solvers/multiphase/interPhaseChangeFoam/nbproject/*
+/projectnb/ryanlab/dorien/OpenFOAM-4.1/solvers/multiphase/interPhaseChangeFoam/testCases/*
+
+

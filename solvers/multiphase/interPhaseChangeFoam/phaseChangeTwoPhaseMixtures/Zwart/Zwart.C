@@ -76,7 +76,7 @@ Foam::phaseChangeTwoPhaseMixtures::Zwart::pCoeff
                     limitedAlpha1*rho1() + (scalar(1)-limitedAlpha1)*rho2()
             );
     return
-            (3*rNuc_*rho2()*sqrt(2/(3*rho1())))/(Rb_*sqrt(mag(p-pSat())+0.01*pSat()));
+            (rho2()*sqrt(2/(3*rho1())))/(Rb_*sqrt(mag(p-pSat())+0.01*pSat()));
 }
 
 
@@ -91,10 +91,10 @@ Foam::Pair<Foam::tmp<Foam::volScalarField>>
 
     return Pair<tmp<volScalarField>>
                                   (
-                                          (Fc_*3*limitedAlpha1*rho2())/Rb_*pCoeff*max(p-pSat(), p0_),
+                                    (Fc_*3*limitedAlpha1)*pCoeff*max(p-pSat(), p0_),
 
 
-                                                  ((Fv_)*3*rNuc_*(1-limitedAlpha1)*rho2())/Rb_*pCoeff*min(p-pSat(),p0_)
+                                    (Fv_*3)*rNuc_*(1-limitedAlpha1)*pCoeff*min(p-pSat(),p0_)
                                   );
 
 }
@@ -106,13 +106,13 @@ Foam::phaseChangeTwoPhaseMixtures::Zwart::mDotP() const
     volScalarField pCoeff(this->pCoeff(p));
 
     volScalarField limitedAlpha1(min(max(alpha1_, scalar(0)),scalar(1)));
-    volScalarField apCoeff(limitedAlpha1*pCoeff);
+    volScalarField apCoeff(pCoeff);
 
     return Pair<tmp<volScalarField>>
                                   (
-                                          Fc_*3*limitedAlpha1*rho2()/Rb_*apCoeff*pos(p-pSat()),
+                                          Fc_*3*limitedAlpha1*apCoeff*pos(p-pSat()),
 
-                                          -Fv_*3*rNuc_*(1-limitedAlpha1)*rho2()/Rb_*apCoeff*neg(p-pSat())
+                                          -Fv_*3*rNuc_*(1-limitedAlpha1)*apCoeff*neg(p-pSat())
                                   );
 }
 
